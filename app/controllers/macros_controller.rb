@@ -53,6 +53,12 @@ class MacrosController < ApplicationController
     c.user(@the_description, image: @the_image)
     @result = c.assistant!
 
+    @carbs = @result.fetch("carbohydrates")
+      @protein = @result.fetch("protein")
+      @fat = @result.fetch("fat")
+      @kcal = @result.fetch("total_calories")
+      @notes = @result.fetch("notes")
+
     render({ :template => "macros_templates/results"})
   end 
 end

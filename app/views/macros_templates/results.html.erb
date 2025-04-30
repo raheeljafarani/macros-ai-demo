@@ -1,17 +1,20 @@
 <h1>Results</h1>
 
-<p>
-<%= @the_description %>
-</p>
+<dl>
+  <dt>Carbs (g)</dt>
+  <dd><%= @carbs %></dd>
 
-<p>
-<img src=<%= @the_image_converted%> width="200">
-</p>
+  <dt>Protein (g)</dt>
+  <dd><%= @protein %></dd>
 
-<p>
-<%= @result %>
-</p>
+  <dt>Fat (g)</dt>
+  <dd><%= @at %></dd>
 
-<p>
+  <dt>Total calories (kcal) </dt>
+  <dd><%= @kcal %></dd>
 
-</p>
+  <dt>Notes</dt>
+  <dd><%= simple_format(@notes) %></dd>
+</dl>
+
+<p><a href="/solutions/blank_form">Estimate another</a></p>
